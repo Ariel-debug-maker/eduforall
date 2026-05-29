@@ -637,3 +637,19 @@
 2026-05-29 21:36:16,364 - INFO - Model prediction (disability group index): 1
 2026-05-29 21:36:16,386 - INFO - Matching rows found: 1
 2026-05-29 21:36:16,388 - INFO - Total recommendations returned: 5
+2026-05-29 22:39:04,842 - INFO - Dataset loaded successfully. Rows: 1287
+2026-05-29 22:39:04,927 - INFO - Data preprocessing complete.
+2026-05-29 22:39:05,272 - INFO - Random Forest model trained successfully.
+2026-05-29 22:39:05,272 - INFO - Model ready for use.
+2026-05-29 22:39:05,352 - INFO - Database initialized successfully.
+2026-05-29 22:39:12,951 - INFO - Database initialized successfully.
+2026-05-29 22:39:17,937 - INFO - Database initialized successfully.
+2026-05-29 22:39:18,115 - INFO - Database initialized successfully.
+2026-05-29 22:39:18,504 - INFO - User logged in: blerio
+2026-05-29 22:39:18,579 - INFO - Database initialized successfully.
+2026-05-29 22:39:18,724 - INFO - Model prediction (disability group index): 1
+2026-05-29 22:39:18,734 - INFO - Matching rows found: 1
+2026-05-29 22:39:18,735 - INFO - Total recommendations returned: 5
+2026-05-29 22:39:18,786 - INFO - Model prediction (disability group index): 1
+2026-05-29 22:39:18,791 - INFO - Matching rows found: 1
+2026-05-29 22:39:18,791 - INFO - Total recommendations returned: 5

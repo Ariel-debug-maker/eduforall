@@ -521,13 +521,16 @@ label { font-weight: 500 !important; font-size: 0.85rem !important; color: #3D51
 /* ── Mobile Responsive ────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-    /* Force sidebar collapsed on mobile — user opens with hamburger ☰ */
-    [data-testid="stSidebar"] {
-        transform: translateX(-100%) !important;
-        transition: transform 0.3s ease !important;
+    /* Style the sidebar toggle button nicely on mobile */
+    [data-testid="collapsedControl"] {
+        background: var(--blue) !important;
+        border-radius: 0 8px 8px 0 !important;
+        color: white !important;
+        width: 28px !important;
+        top: 50% !important;
     }
-    [data-testid="stSidebar"][aria-expanded="true"] {
-        transform: translateX(0) !important;
+    [data-testid="collapsedControl"] svg {
+        fill: white !important;
     }
 
     /* Reduce content padding on small screens */
