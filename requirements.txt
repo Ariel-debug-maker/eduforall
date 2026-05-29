@@ -1,0 +1,24 @@
+# ── EduForAll Requirements ─────────────────────────────────────────────────
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# ── Web App ────────────────────────────────────────────────────────────────
+streamlit>=1.35.0               # Main web framework
+streamlit-authenticator>=0.3.2  # Login/signup authentication
+
+# ── Machine Learning ───────────────────────────────────────────────────────
+scikit-learn>=1.5.0             # Random Forest model (Python 3.13 compatible)
+pandas>=2.2.0                   # Dataset loading and processing
+numpy>=2.0.0                    # Numerical operations (Python 3.13 compatible)
+
+# ── Visualization ──────────────────────────────────────────────────────────
+plotly>=5.22.0                  # Interactive charts on the dashboard
+
+# ── Authentication & Security ──────────────────────────────────────────────
+bcrypt>=4.1.3                   # Password hashing
+
+# ── Monitoring ─────────────────────────────────────────────────────────────
+prometheus-client>=0.20.0       # Exposes app metrics for Prometheus to scrape
+
+# ── Utilities ──────────────────────────────────────────────────────────────
+PyYAML>=6.0.1                   # Used by streamlit-authenticator for config
