@@ -36,7 +36,7 @@ st.set_page_config(
     page_title="EduForAll",
     page_icon="🎓",
     layout="wide",
-    initial_sidebar_state="expanded"  # collapsed by default on mobile
+    initial_sidebar_state="collapsed"
 )
 
 init_db()
@@ -78,6 +78,15 @@ html, body, .stApp {
     color: var(--text);
 }
 #MainMenu, footer, header { visibility: hidden; }
+
+/* Hide Streamlit branding logos at bottom right */
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+[data-testid="stStatusWidget"] { display: none !important; }
+.viewerBadge_container__r5tak { display: none !important; }
+.styles_viewerBadge__CvC9N { display: none !important; }
+#stDecoration { display: none !important; }
+
 .block-container {
     padding: 0 !important;
     max-width: 100% !important;
@@ -510,9 +519,16 @@ label { font-weight: 500 !important; font-size: 0.85rem !important; color: #3D51
     margin-top: 1.5rem;
 }
 /* ── Mobile Responsive ────────────────────────────────────────────────────── */
-/* Applies when screen width is 768px or less (phones and small tablets) */
-
 @media (max-width: 768px) {
+
+    /* Force sidebar collapsed on mobile — user opens with hamburger ☰ */
+    [data-testid="stSidebar"] {
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+    }
+    [data-testid="stSidebar"][aria-expanded="true"] {
+        transform: translateX(0) !important;
+    }
 
     /* Reduce content padding on small screens */
     .content-wrap { padding: 1rem 1rem !important; }
@@ -1345,8 +1361,8 @@ def dashboard_page():
     # ── Tabs ─────────────────────────────────────────────────────────────────
     st.markdown("<div style='padding:1.2rem 2.5rem 0 2.5rem;'>", unsafe_allow_html=True)
     tab1, tab2, tab3, tab4 = st.tabs([
-        "📊  Analytics", "🎯  Recommendations",
-        "⭐  Rate Strategies", "📡  Live Metrics"
+        "📊 Analytics", "🎯 Recommendations",
+        "⭐ Rate", "📡 Metrics"
     ])
     st.markdown("</div>", unsafe_allow_html=True)
 
